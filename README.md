@@ -45,5 +45,5 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### `Ссылка на развернутое приложение movies-app`
+### `Ссылка на развернутое приложение app-react-ts-news`
 https://app-react-ts-news.vercel.app/
