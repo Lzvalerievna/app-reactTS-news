@@ -3,8 +3,36 @@ import {values} from '../fileDate';
 import { ContentListType, ButtonsListType} from '../modejs';
 import ListEvents from '../ListEvents/ListEvents';
 import Navigation, {PropsRefType} from '../Navigation/Navigation';
-import {ContainerApp, AppName} from '../StyleComponent';
 import gsap from 'gsap';
+import styled from "styled-components";
+
+const ContainerApp = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: 50%;
+  transform: translate(-50%,-50%);
+  width: 1248px;
+  height: 1248px;
+  background: 
+    linear-gradient( #42567A, transparent 1px),
+    linear-gradient(90deg,#42567A, transparent 1px);
+    background-size: 624px 624px;
+    border: 1px solid #42567A;
+`;
+
+const AppName = styled.h1`
+  margin: 0;
+  width: 353px;
+  height: 134px;
+  font-size: 56px;
+  color: #696c7a;
+  line-height: 120%;
+  padding-left: 78px;
+  padding-top: 178px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+`;
 
 function App() {
 

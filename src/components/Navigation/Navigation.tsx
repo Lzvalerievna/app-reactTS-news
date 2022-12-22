@@ -1,17 +1,100 @@
 import React, {useRef, useEffect, RefObject} from 'react';
-import {
-    ContentBox,
-    Container,
-    ButtonContainer,
-    ButtonName,
-    NavPagination,
-    ButtonNext,
-    ButtonPrev,
-    PaginationNum
-} from '../StyleComponent';
 import Button from '../Button/Button';
 import { PropsTypeNav } from '../modejs';
 import gsap from 'gsap';
+import styled from "styled-components";
+
+const ContentBox = styled.div`
+  margin: 0 auto;
+  margin-top: -140px;
+  width: 500px;
+`;
+
+const Container = styled.div`
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 1px solid #9D45CC;
+  font-size: 0;
+  `;
+
+const ButtonContainer = styled.div`
+  position: absolute;
+  transform:  rotate(60deg);
+`;
+
+const ButtonName = styled.div`
+  position: absolute;
+  font-size: 30px;
+  margin-left: 440px;
+  margin-top: -10px;
+  opacity: 0;
+  color: #9D45CC;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+`;
+
+const NavPagination =styled.div`
+  margin-left: 80px;
+`;
+
+const ButtonGroop = styled.button`
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+  background-color: #9D45CC;
+  
+  &:after {
+    color: white;
+    font-size: 24px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+  }
+  
+  &:disabled {
+    cursor: not-allowed;
+    background-color: transparent;
+    border: 1px solid gray;
+    &:after {
+      color: gray;
+    }
+  }
+`;
+
+const ButtonPrev =styled(ButtonGroop)`
+  &:after {
+     content: '<';
+  }
+`;
+const ButtonNext =styled(ButtonGroop)`
+  margin-left: 20px;
+    &:after {
+      content: '>';
+      color: white;
+    }
+`;
+
+const PaginationNum = styled.div`
+  margin-left: 5px;
+  display: block;
+  margin-top: -100px;
+  font-size: 24px;
+  color: #9D45CC;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+`;
+
 
 export type PropsRefType = {
   nameRef: RefObject<HTMLParagraphElement>;

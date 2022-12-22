@@ -1,6 +1,12 @@
 import Event from '../Event/Event';
-import {EventsList} from '../StyleComponent';
 import { ContentListType, TypeListEvents } from '../modejs';
+import styled from "styled-components";
+
+const EventsList = styled.div`
+  font-size: 25px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+`;
 
 function ListEvents({filteredEvents}: TypeListEvents) {
 
